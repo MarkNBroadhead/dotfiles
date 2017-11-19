@@ -1,0 +1,10 @@
+[user]
+  email = MarkNBroadhead@gmail.com
+  name = Mark N Broadhead
+[github]
+  user=MarkNBroadhead
+[core]
+  editor = vim
+[push]
+  followTags = true
+  default = current
