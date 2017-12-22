@@ -1,5 +1,5 @@
 # Dotfiles
-Utility to assist in configuration synchronization.
+Synchronizes configuration (dotfiles) across computers.
 
 # Usage
 *Don't* use it yet. It isn't ready!
