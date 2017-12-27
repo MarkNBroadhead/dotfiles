@@ -95,12 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias sshRouter='sudo ssh -L 80:10.13.37.1:80 -p 22 -l orcslayermack -N home.markbroadhead.com'
-alias sshEsxi='sudo ssh -L 443:10.13.37.25:443 -p 22 -l orcslayermack -N home.markbroadhead.com'
-alias sshWifi='sudo ssh -L 8443:10.13.37.45:8443 -p 22 -l orcslayermack -N home.markbroadhead.com'
-alias proxyHome='sudo ssh -D 80 orcslayermack@home.markbroadhead.com'
-alias commercecode='cd ~/Code/work/commerce/'
-alias validateDns='python3 ~/Code/work/utils/awsutils/validateDns.py'
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export MAVEN_HOME=/usr/local/bin
@@ -115,5 +109,4 @@ export RTV_BROWSER=safari
 bindkey -v
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 

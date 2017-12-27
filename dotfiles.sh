@@ -1,26 +1,14 @@
 #!/bin/bash
 ############################
-# Dotfiles! Thank the Wizard
+# Dotfiles! Thank the wizard
 ############################
 
-name="Dotfiles 0.0.1"
-
-# Add symlinks to each file.
-function link_everything {
-  echo "Symlinking dotfiles"
-  for file in $(find "./files" -depth 1 -exec basename {} \;); do
-    ln -sf "$(pwd)/files/$file" "$HOME/$file"
-  done
-}
-
-# Update the dotfiles repo.
-function update {
-  echo Updating dotfiles...
-  git pull origin master
-}
+name="Dotfiles 0.0.2"
 
 # Show the usage screen.
 function print_help {
+
+  # Add an indent level to messages.
   function indent {
     local indention=""
     for _ in `seq 1 "$1"`; do
@@ -31,11 +19,17 @@ function print_help {
 
   echo $name
   echo "Usage: dotfiles <command>"
-  indent 1 "link    - Symlink everything in 'dotfiles/linked'"
-  indent 1 "update  - Pull dotfile changes from git"
+  indent 1 "link    - Symlink project dotfiles to home directory"
+  indent 1 "update  - Pull new dotfiles from git repo"
+  indent 1 "install - Install programs"
+  indent 1 "dir     - Print the dotfiles directory"
 }
 
-# Figure out which command to run.
+function install {
+  bash "$DOTFILES_DIR/install.sh"
+}
+
+# Figure out what command to run.
 case "$1" in
   "link")
     link_everything
@@ -43,10 +37,18 @@ case "$1" in
   "update")
     update
     ;;
+  "install")
+    install
+    ;;
+  "dir")
+    echo "$DOTFILES_DIR"
+    ;;
   *)
     if [[ ! -z "$1" && "$1" != "--help" ]]; then
       echo "Invalid command '$@'. Showing help instead."
       print_help
+
+      # Probably a typo. Make them feel the pain!
       exit 1
     fi
     print_help
