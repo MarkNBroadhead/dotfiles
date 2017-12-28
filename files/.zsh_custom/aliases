@@ -11,4 +11,4 @@ alias sshWifi='sudo ssh -L 8443:10.13.37.45:8443 -p 22 -l orcslayermack -N home.
 alias proxyHome='sudo ssh -D 80 orcslayermack@home.markbroadhead.com'
 alias commercecode='cd ~/Code/work/commerce/'
 alias validateDns='python3 ~/Code/work/utils/awsutils/validateDns.py'
-alias gitpullall='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull" \;'
+alias gitpullall='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull --all" \;'
