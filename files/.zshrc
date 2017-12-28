@@ -95,6 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.zsh_custom/aliases
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export MAVEN_HOME=/usr/local/bin
