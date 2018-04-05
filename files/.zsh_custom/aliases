@@ -13,3 +13,5 @@ alias commercecode='cd ~/Code/work/commerce/'
 alias validateDns='python3 ~/Code/work/utils/awsutils/validateDns.py'
 alias gitpullall='find . -type d -name .git -exec sh -c "cd \"{}\"/../ && pwd && git pull --all" \;'
 alias ij='open -a "IntelliJ IDEA.app"'
+alias crontab="VIM_CRONTAB=true crontab"
+
