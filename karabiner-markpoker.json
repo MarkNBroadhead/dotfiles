@@ -23,7 +23,7 @@
       ]
     },
     {
-      "description": "Change fn + ijkl' to arrow keys",
+      "description": "Change fn + hjkl' to vim-style arrow keys",
       "manipulators": [
         {
           "type": "basic",
