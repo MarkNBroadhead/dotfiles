@@ -8,3 +8,5 @@
 [push]
   followTags = true
   default = current
+[init]
+  defaultBranch = main
